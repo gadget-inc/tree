@@ -503,6 +503,7 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
       eventKey,
       className,
       style,
+      tabIndex,
       dragOver,
       dragOverGapTop,
       dragOverGapBottom,
@@ -565,6 +566,7 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
           'filter-node': filterTreeNode && filterTreeNode(convertNodePropsToEventData(this.props)),
         })}
         style={style}
+        tabIndex={tabIndex}
         // Draggable config
         draggable={draggableWithoutDisabled}
         aria-grabbed={dragging}

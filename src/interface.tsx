@@ -32,6 +32,7 @@ export interface TreeNodeProps<TreeDataType extends BasicDataNode = DataNode> {
   isLeaf?: boolean;
   checkable?: boolean;
   selectable?: boolean;
+  tabIndex?: number;
   disabled?: boolean;
   disableCheckbox?: boolean;
   icon?: IconType;
