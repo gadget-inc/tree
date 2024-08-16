@@ -450,7 +450,7 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
         onContextMenu={this.onContextMenu}
-        onClick={this.onSelectorClick}
+        
         onDoubleClick={this.onSelectorDoubleClick}
       >
         {$icon}
@@ -578,6 +578,7 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
         onDrop={mergedDraggable ? this.onDrop : undefined}
         onDragEnd={mergedDraggable ? this.onDragEnd : undefined}
         onMouseMove={onMouseMove}
+        onClick={this.onSelectorClick}
         {...ariaSelected}
         {...dataOrAriaAttributeProps}
       >
@@ -589,7 +590,6 @@ class InternalTreeNode extends React.Component<InternalTreeNodeProps, TreeNodeSt
         />
         {this.renderDragHandler()}
         {this.renderSwitcher()}
-        {this.renderCheckbox()}
         {this.renderSelector()}
       </div>
     );
